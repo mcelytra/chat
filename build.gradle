@@ -1,0 +1,24 @@
+plugins {
+    id 'org.gradle.java.experimental-jigsaw' version '0.1.1'
+}
+
+apply plugin: 'java'
+
+group = 'org.elytra'
+version = '1.0-SNAPSHOT'
+
+sourceCompatibility = 10
+
+ext.moduleName = 'org.elytra.chat'
+
+javaModule.name = 'org.elytra.chat'
+compileJava.options.encoding = 'UTF-8'
+
+repositories {
+    maven { url = 'https://aperlambda.github.io/maven' }
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.aperlambda:lambdajcommon:1.4.4'
+}
