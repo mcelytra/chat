@@ -1,5 +1,5 @@
-open module org.elytra.chat {
-	exports org.elytra.chat;
+open module org.mcelytra.chat {
+	exports org.mcelytra.chat;
 
 	requires org.aperlambda.lambdacommon;
 	requires annotations;

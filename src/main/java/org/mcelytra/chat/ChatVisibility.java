@@ -7,7 +7,7 @@
  * see the LICENSE file.
  */
 
-package org.elytra.chat;
+package org.mcelytra.chat;
 
 import org.aperlambda.lambdacommon.utils.Nameable;
 import org.jetbrains.annotations.NotNull;

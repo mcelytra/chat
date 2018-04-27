@@ -9,9 +9,9 @@ version = '1.0-SNAPSHOT'
 
 sourceCompatibility = 10
 
-ext.moduleName = 'org.elytra.chat'
+ext.moduleName = 'org.mcelytra.chat'
 
-javaModule.name = 'org.elytra.chat'
+javaModule.name = 'org.mcelytra.chat'
 compileJava.options.encoding = 'UTF-8'
 
 repositories {

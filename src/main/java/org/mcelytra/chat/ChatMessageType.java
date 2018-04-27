@@ -7,7 +7,7 @@
  * see the LICENSE file.
  */
 
-package org.elytra.chat;
+package org.mcelytra.chat;
 
 /**
  * Represents the position on the screen where a message will appear.
