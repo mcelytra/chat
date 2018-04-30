@@ -20,5 +20,5 @@ repositories {
 }
 
 dependencies {
-    compile 'org.aperlambda:lambdajcommon:1.4.4'
+    compile 'org.aperlambda:lambdajcommon:1.4.9'
 }
