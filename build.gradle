@@ -3,9 +3,12 @@ plugins {
 }
 
 apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: 'maven-publish'
+apply plugin: 'signing'
 
 group = 'org.mcelytra'
-version = '1.0-SNAPSHOT'
+version = '1.0.0-SNAPSHOT'
 
 sourceCompatibility = 10
 
@@ -23,4 +26,58 @@ repositories {
 dependencies {
     compile 'net.md-5:bungeecord-chat:1.12-SNAPSHOT'
     compile 'org.aperlambda:lambdajcommon:1.4.9'
+}
+
+javadoc {
+    inputs.property("moduleName", moduleName)
+    doFirst {
+        options.addStringOption('XDignore.symbol.file', '-html5')
+        options.addStringOption('-module-path', classpath.asPath)
+    }
+}
+
+jar {
+    from 'LICENSE'
+    inputs.property("moduleName", moduleName)
+    manifest {
+        attributes('Automatic-Module-Name': moduleName)
+    }
+}
+
+task sourcesJar(type: Jar, dependsOn: classes) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+artifacts {
+    archives sourcesJar
+    archives javadocJar
+}
+
+signing {
+    sign configurations.archives
+}
+
+publishing {
+    publications {
+        elytrachat(MavenPublication) {
+            from components.java
+            groupId = project.group
+            artifactId = 'elytra-chat'
+            version = project.version
+
+            artifact sourcesJar
+            artifact javadocJar
+        }
+    }
+    repositories {
+        maven {
+            url "$buildDir/repo"
+        }
+    }
 }
