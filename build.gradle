@@ -4,7 +4,7 @@ plugins {
 
 apply plugin: 'java'
 
-group = 'org.elytra'
+group = 'org.mcelytra'
 version = '1.0-SNAPSHOT'
 
 sourceCompatibility = 10
@@ -15,10 +15,12 @@ javaModule.name = 'org.mcelytra.chat'
 compileJava.options.encoding = 'UTF-8'
 
 repositories {
+    maven { url = 'https://hub.spigotmc.org/nexus/content/groups/public/' }
     maven { url = 'https://aperlambda.github.io/maven' }
     mavenCentral()
 }
 
 dependencies {
+    compile 'net.md-5:bungeecord-chat:1.12-SNAPSHOT'
     compile 'org.aperlambda:lambdajcommon:1.4.9'
 }
