@@ -1,7 +1,7 @@
 /*
- * Copyright © 2018 LambdAurora <aurora42lambda@gmail.com>
+ * Copyright © 2019 LambdAurora <aurora42lambda@gmail.com>
  *
- * This file is part of elytra.
+ * This file is part of mcelytra.
  *
  * Licensed under the MIT license. For more information,
  * see the LICENSE file.
@@ -14,7 +14,8 @@ package org.mcelytra.chat;
  */
 public enum ChatMessageType
 {
-	CHAT,
-	SYSTEM,
-	ACTION_BAR
+    CHAT,
+    SYSTEM,
+    ACTION_BAR
 }
+

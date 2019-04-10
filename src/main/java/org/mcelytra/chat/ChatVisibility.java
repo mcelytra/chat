@@ -1,7 +1,7 @@
 /*
- * Copyright © 2018 LambdAurora <aurora42lambda@gmail.com>
+ * Copyright © 2019 LambdAurora <aurora42lambda@gmail.com>
  *
- * This file is part of elytra.
+ * This file is part of mcelytra.
  *
  * Licensed under the MIT license. For more information,
  * see the LICENSE file.
@@ -21,42 +21,41 @@ import org.jetbrains.annotations.NotNull;
  */
 public enum ChatVisibility implements Nameable
 {
-	/**
-	 * {@code FULL} lets the full chat be visible by the player.
-	 */
-	FULL(0, "Full"),
-	/**
-	 * {@code SYSTEM} lets the commands output visible by the player.
-	 */
-	SYSTEM(1, "System"),
-	/**
-	 * {@code HIDDEN} doesn't let the chat be visible by the player, only the {@code ACTION_BAR} is visible.
-	 */
-	HIDDEN(2, "Hidden");
+    /**
+     * {@code FULL} lets the full chat be visible by the player.
+     */
+    FULL(0, "Full"),
+    /**
+     * {@code SYSTEM} lets the commands output visible by the player.
+     */
+    SYSTEM(1, "System"),
+    /**
+     * {@code HIDDEN} doesn't let the chat be visible by the player, only the {@code ACTION_BAR} is visible.
+     */
+    HIDDEN(2, "Hidden");
 
-	private int    id;
-	private String name;
+    private int    id;
+    private String name;
 
-	ChatVisibility(int id, String name)
-	{
-		this.id = id;
-		this.name = name;
-	}
+    ChatVisibility(int id, String name)
+    {
+        this.id = id;
+        this.name = name;
+    }
 
-	/**
-	 * Gets the id of the chat visibility flag.
-	 *
-	 * @return The id of the flag.
-	 */
-	public int getId()
-	{
-		return id;
-	}
+    /**
+     * Gets the id of the chat visibility flag.
+     *
+     * @return The id of the flag.
+     */
+    public int get_id()
+    {
+        return this.id;
+    }
 
-	@Override
-	public @NotNull
-	String getName()
-	{
-		return name;
-	}
+    @Override
+    public @NotNull String get_name()
+    {
+        return this.name;
+    }
 }
