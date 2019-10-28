@@ -18,4 +18,3 @@ public enum ChatMessageType
     SYSTEM,
     ACTION_BAR
 }
-
