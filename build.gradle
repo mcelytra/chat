@@ -21,7 +21,7 @@ repositories {
 
 dependencies {
     compile 'net.md-5:bungeecord-chat:1.12-SNAPSHOT'
-    compile 'org.aperlambda:lambdajcommon:1.7.0'
+    compile 'org.aperlambda:lambdajcommon:1.7.1'
 }
 
 javadoc {
@@ -52,10 +52,6 @@ task javadocJar(type: Jar, dependsOn: javadoc) {
 artifacts {
     archives sourcesJar
     archives javadocJar
-}
-
-signing {
-    sign configurations.archives
 }
 
 publishing {
