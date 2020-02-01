@@ -1,5 +1,5 @@
 /*
- * Copyright © 2019 LambdAurora <aurora42lambda@gmail.com>
+ * Copyright © 2020 LambdAurora <aurora42lambda@gmail.com>
  *
  * This file is part of mcelytra.
  *
@@ -37,7 +37,7 @@ public enum ChatVisibility implements Nameable
     private int    id;
     private String name;
 
-    ChatVisibility(int id, String name)
+    ChatVisibility(int id, @NotNull String name)
     {
         this.id = id;
         this.name = name;
@@ -48,13 +48,13 @@ public enum ChatVisibility implements Nameable
      *
      * @return The id of the flag.
      */
-    public int get_id()
+    public int getId()
     {
         return this.id;
     }
 
     @Override
-    public @NotNull String get_name()
+    public @NotNull String getName()
     {
         return this.name;
     }
